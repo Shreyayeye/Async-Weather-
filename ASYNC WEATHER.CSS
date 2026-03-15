@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a2340;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* â”€â”€ Top Row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.top-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* â”€â”€ Card Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.card {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+/* â”€â”€ Search Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.search-card {
+    flex: 1;
+}
+
+.search-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.search-row input {
+    flex: 1;
+    padding: 7px 10px;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-row input:focus {
+    border-color: #e8603c;
+}
+
+.btn-search {
+    background: #e8603c;
+    color: white;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    background: #d04f2d;
+}
+
+/* â”€â”€ History Pills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.history-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 24px;
+}
+
+.pill {
+    background: #e8603c;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+}
+
+.pill:hover {
+    background: #c94e2c;
+}
+
+/* â”€â”€ Weather Info Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.weather-card {
+    flex: 1;
+}
+
+.weather-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.weather-table tr:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.weather-table td {
+    padding: 6px 10px;
+}
+
+.weather-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.weather-error {
+    color: #e8603c;
+    font-size: 0.82rem;
+}
+
+.weather-placeholder {
+    color: #aaa;
+    font-size: 0.82rem;
+}
+
+/* â”€â”€ Console Panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.console-card {
+    margin-bottom: 0;
+}
+
+.console-box {
+    background: #1e1e2e;
+    border-radius: 4px;
+    padding: 12px;
+    min-height: 100px;
+    max-height: 180px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+}
+
+.console-box p {
+    margin-bottom: 3px;
+    line-height: 1.5;
+}
+
+/* â”€â”€ Console Log Colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.log-sync {
+    color: #7ec8e3;
+}
+
+.log-async {
+    color: #b5e48c;
+}
+
+.log-micro {
+    color: #f9c74f;
+}
+
+.log-macro {
+    color: #f8961e;
+}
+
+.log-data {
+    color: #90e0ef;
+}
+
+.log-error {
+    color: #ff6b6b;
+}
+
+/* â”€â”€ Console Label Badges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.label {
+    display: inline-block;
+    font-size: 0.68rem;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.lbl-sync {
+    background: #7ec8e3;
+    color: #000;
+}
+
+.lbl-async {
+    background: #b5e48c;
+    color: #000;
+}
+
+.lbl-micro {
+    background: #f9c74f;
+    color: #000;
+}
+
+.lbl-macro {
+    background: #f8961e;
+    color: #000;
+}
